@@ -1,0 +1,6 @@
+*.dll
+*.pdb
+# compiled files
+obj
+bin
+.vs/

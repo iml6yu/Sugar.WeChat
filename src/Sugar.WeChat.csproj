@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;</TargetFrameworks>
+    <Authors>iml6yu</Authors>
+    <Description>微信接口类库
+目前只实现了模板消息（公众号和小程序）</Description>
+    <Version>1.1.1</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>©iml6yu</Copyright>
+    <PackageIcon>favorite_64.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageProjectUrl>https://github.com/iml6yu/Sugar.WeChat</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
+    <OutputPath>bin\Release</OutputPath>
+    <DocumentationFile>bin\Release\Sugar.WeChat.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
+    <OutputPath>bin\Debug</OutputPath>
+    <DocumentationFile>bin\Debug\Sugar.WeChat.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pay\" />
+  </ItemGroup>
+  <ItemGroup>     
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />     
+    <PackageReference Include="Sugar.Utils" Version="1.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Sugar\Resources\favorite_64.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
