@@ -13,6 +13,12 @@ namespace Sugar.WeChat.Access
     public class WeChatAccessTokenManager
     {
         private AccessTokenCacheManager cacheManager;
+
+        public WeChatAccessTokenManager()
+        {
+
+        }
+
         public WeChatAccessTokenManager(AccessTokenCacheManager cacheManager)
         {
             this.cacheManager = cacheManager;
@@ -27,7 +33,7 @@ namespace Sugar.WeChat.Access
         public WeChatAccessTokenManager(AccessTokenCacheManager cacheManager, WeChatAccessOption option) : this(cacheManager)
         {
             if (option != null)
-                cacheManager.Add(option.AppId, option.AppSecret);
+                SetOption(option);
         }
 
         /// <summary>
@@ -57,9 +63,14 @@ namespace Sugar.WeChat.Access
             return await RequestAccessTokenAsync(appid, cacheManager.GetSecret(appid));
         }
 
+        internal void SetOption(WeChatAccessOption option)
+        {
+            cacheManager.Add(option.AppId, option.AppSecret);
+        }
+
         private async System.Threading.Tasks.Task<AccessTokenInfo> RequestAccessTokenAsync(string appid, string appscret)
         {
-            var accesstoken = await HttpHelper.GetJsonAsync<AccessTokenInfo>( "https://api.weixin.qq.com/cgi-bin/token", new { grant_type = "client_credential", appid = appid, secret = appscret });
+            var accesstoken = await HttpHelper.GetJsonAsync<AccessTokenInfo>("https://api.weixin.qq.com/cgi-bin/token", new { grant_type = "client_credential", appid = appid, secret = appscret });
             return accesstoken;
         }
 

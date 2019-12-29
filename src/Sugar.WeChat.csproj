@@ -5,7 +5,7 @@
     <Authors>iml6yu</Authors>
     <Description>微信接口类库
 目前只实现了模板消息（公众号和小程序）</Description>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>©iml6yu</Copyright>
     <PackageIcon>favorite_64.png</PackageIcon>
@@ -13,6 +13,9 @@
     <PackageProjectUrl>https://github.com/iml6yu/Sugar.WeChat</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.1.1.1</AssemblyVersion>
+    <FileVersion>1.1.1.1</FileVersion>
+    <PackageReleaseNotes>优化关于option的构造使用</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">

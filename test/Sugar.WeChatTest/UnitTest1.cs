@@ -1,14 +1,19 @@
-﻿# 微信类库
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
+using Sugar.WeChat;
+using Sugar.WeChat.Options;
+using Sugar.WeChat.TemplateMsg;
+using Sugar.WeChat.TemplateMsg.OffiAccount;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Xunit;
 
-### 使用之前记得配置公众号ip白名单
-*不清楚配置流程的朋友请自行查询*
-
-## TemplateMessage 
-    模板消息类库
-
-e.g. 测试用例
-```csharp
- [Fact]
+namespace Sugar.WeChatTest
+{
+    public class UnitTest1
+    {
+        [Fact]
         public async System.Threading.Tasks.Task TestWeChatTempMsgAsync()
         {
             TemplateMessageProvider p = new TemplateMessageProvider(new WeChatAccessOption("wx9b0f67e90ae6aff3", "68af606451a13737d0ae0bde2f31278b"), new WeChat.Access.WeChatAccessTokenManager(new AccessTokenCacheManager(new MemoryCache(new MemoryCacheOptions()), new LoggerFactory())));
@@ -18,13 +23,13 @@ e.g. 测试用例
                 Url = "www.baidu.com",
                 Data = new MessageContent()
                 {
-                    MessageTitle = new MessageContentItem("测试title"),
-                    MessageDatas = new List<MessageContentItem>() { new MessageContentItem("数据1"), new MessageContentItem("数据2") },
-                    Remark = new MessageContentItem("备注信息")
+                    MessageTitle = new MessageContentItem("����title"),
+                    MessageDatas = new List<MessageContentItem>() { new MessageContentItem("����1"), new MessageContentItem("����2") },
+                    Remark = new MessageContentItem("��ע��Ϣ")
                 }
             }, "o6qCa1CdDnDQhEkPmwWJynGMQ4Ho");
             Assert.Equal(result.Count, 1);
             Assert.Equal(result.First().Value.ErrCode, 0);
         }
-```
-
+    }
+}

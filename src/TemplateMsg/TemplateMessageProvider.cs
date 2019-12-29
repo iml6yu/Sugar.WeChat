@@ -26,6 +26,7 @@ namespace Sugar.WeChat.TemplateMsg
         public TemplateMessageProvider(WeChatAccessOption option, WeChatAccessTokenManager tokenManager) : this(tokenManager)
         {
             this.option = option;
+            this.tokenManager.SetOption(option);
         }
 
         /// <summary>
