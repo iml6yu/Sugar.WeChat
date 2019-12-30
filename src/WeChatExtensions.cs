@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Sugar.WeChat.Options;
+using Sugar.WeChat.Cache;
 using Sugar.WeChat.TemplateMsg;
 using System;
 using System.Collections.Generic;

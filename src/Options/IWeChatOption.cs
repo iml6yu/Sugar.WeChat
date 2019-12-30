@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sugar.WeChat.Options
+namespace Sugar.WeChat
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IWeChatOption
     {
         /// <summary>

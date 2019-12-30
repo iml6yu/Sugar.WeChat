@@ -1,10 +1,7 @@
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Sugar.WeChat;
-using Sugar.WeChat.Options;
-using Sugar.WeChat.TemplateMsg;
-using Sugar.WeChat.TemplateMsg.OffiAccount;
-using System;
+using Sugar.WeChat.Cache;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;

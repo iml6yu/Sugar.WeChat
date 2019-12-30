@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sugar.WeChat", "src\Sugar.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sugar.WeChatTest", "test\Sugar.WeChatTest\Sugar.WeChatTest.csproj", "{D2605FE7-4A8F-40F7-8E4D-F16FE9F79EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sugar.WeChatSample", "sample\Sugar.WeChatSample\Sugar.WeChatSample.csproj", "{1D830ADE-5CB7-4F9F-8ECE-A5E4A05C477D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sugar.WeChatSample", "sample\Sugar.WeChatSample\Sugar.WeChatSample.csproj", "{1D830ADE-5CB7-4F9F-8ECE-A5E4A05C477D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4934BC02-61DB-4944-98AF-68299514B073}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,13 +1,9 @@
 ﻿using Sugar.WeChat.Access;
-using Sugar.WeChat.Options;
 using Sugar.WeChat.TemplateMsg.MiniProgram;
 using Sugar.WeChat.TemplateMsg.OffiAccount;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Sugar.WeChat.TemplateMsg
+namespace Sugar.WeChat
 {
     public class TemplateMessageProvider
     {

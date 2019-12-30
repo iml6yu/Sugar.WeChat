@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Sugar.WeChat
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class AccessTokenInfo: TemplateMessageResult
     {
         /// <summary>

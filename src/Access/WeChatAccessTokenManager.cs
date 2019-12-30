@@ -1,9 +1,5 @@
 ﻿using Sugar.Utils;
-using Sugar.WeChat.Options;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+using Sugar.WeChat.Cache;
 
 namespace Sugar.WeChat.Access
 {
@@ -13,12 +9,18 @@ namespace Sugar.WeChat.Access
     public class WeChatAccessTokenManager
     {
         private AccessTokenCacheManager cacheManager;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public WeChatAccessTokenManager()
         {
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cacheManager"></param>
         public WeChatAccessTokenManager(AccessTokenCacheManager cacheManager)
         {
             this.cacheManager = cacheManager;

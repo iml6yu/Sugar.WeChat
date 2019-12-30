@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sugar.WeChat.TemplateMsg
+namespace Sugar.WeChat
 {
     public class TemplateMessageResult
     {

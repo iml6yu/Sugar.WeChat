@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sugar.WeChat.Options
+namespace Sugar.WeChat
 {
     /// <summary>
     /// 访问参数配置
     /// </summary>
     public class WeChatAccessOption : IWeChatOption
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public WeChatAccessOption()
         {
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="appid"></param>
+        /// <param name="appsecret"></param>
         public WeChatAccessOption(string appid, string appsecret)
         {
             AppId = appid;

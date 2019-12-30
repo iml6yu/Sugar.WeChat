@@ -1,17 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Sugar.WeChat;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Sugar.WeChat.TemplateMsg;
-using Sugar.WeChat.TemplateMsg.OffiAccount;
 
 namespace Sugar.WeChatSample.Controllers
 {
     public class WeChatTemplageMessageController : Controller
     {
-        Sugar.WeChat.TemplateMsg.TemplateMessageProvider provider;
-        public WeChatTemplageMessageController(Sugar.WeChat.TemplateMsg.TemplateMessageProvider provider)
+       TemplateMessageProvider provider;
+        public WeChatTemplageMessageController(TemplateMessageProvider provider)
         {
             this.provider = provider;
         }

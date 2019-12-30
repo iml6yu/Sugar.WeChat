@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sugar.WeChat
+namespace Sugar.WeChat.Cache
 {
     /// <summary>
     /// 缓存管理
