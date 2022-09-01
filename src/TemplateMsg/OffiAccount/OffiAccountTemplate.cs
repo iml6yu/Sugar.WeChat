@@ -1,12 +1,5 @@
-﻿using Newtonsoft.Json;
-using Sugar.Utils;
-using System;
-using System.Collections;
+﻿using Sugar.Utils;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 
 namespace Sugar.WeChat.TemplateMsg.OffiAccount
 {

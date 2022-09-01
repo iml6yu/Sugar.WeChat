@@ -1,12 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sugar.WeChat.Cache;
-using Sugar.WeChat.TemplateMsg;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sugar.WeChat
 {
@@ -139,8 +137,12 @@ namespace Sugar.WeChat
 
         private static void AddAccessTokenManager(IServiceCollection services)
         {
+          
             if (services.Any(t => t.ServiceType == typeof(AccessTokenCacheManager))) return;
-            services.AddSingleton<AccessTokenCacheManager>();
+            var memoryCache = new MemoryCache(new MemoryCacheOptions());
+            services.AddSingleton(memoryCache);
+            //services.AddSingleton<AccessTokenCacheManager>();
+            services.AddSingleton(new AccessTokenCacheManager(memoryCache, new LoggerFactory()));
         }
     }
 }
