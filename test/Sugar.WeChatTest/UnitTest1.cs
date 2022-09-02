@@ -13,11 +13,11 @@ namespace Sugar.WeChatTest
         [Fact]
         public async System.Threading.Tasks.Task TestWeChatTempMsgAsync()
         {
-            TemplateMessageProvider p = new TemplateMessageProvider(new WeChatAccessOption("wx9b0f67e90ae6aff3", "68af606451a13737d0ae0bde2f31278b"),
+            TemplateMessageProvider p = new TemplateMessageProvider(new WeChatAccessOption("wxe9a586dfd1ef2c71", "67eadd0b9c4ae4502869cb8c0e541ff8"),
                 new WeChat.Access.WeChatAccessTokenManager(new AccessTokenCacheManager(new MemoryCache(new MemoryCacheOptions()), new LoggerFactory())));
             var result = await p.SendOffiAccountMessageAsync(new OffiAccountMessage()
             {
-                TemplateId = "JLc7M--uP751GxvVf2_Msqp1m_gne0XXiSzJISloy8g",
+                TemplateId = "JoeKgi6Kr0PRBEt2eiR61HrQ-S2lak0-dHMX6Rmof9o",
                 Url = "www.baidu.com",
                 Data = new MessageContent()
                 {
@@ -25,7 +25,7 @@ namespace Sugar.WeChatTest
                     MessageDatas = new List<MessageContentItem>() { new MessageContentItem("数据1"), new MessageContentItem("数据2") },
                     Remark = new MessageContentItem("备注信息")
                 }
-            }, "o6qCa1CdDnDQhEkPmwWJynGMQ4Ho");
+            }, "oRFyd57DxrrT_DdAHPFbVbpOHe70");
             Assert.Equal(result.Count, 1);
             Assert.Equal(result.First().Value.ErrCode, 0);
         }
